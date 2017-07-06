@@ -1,4 +1,5 @@
-FROM microsoft/dotnet:runtime
-WORKDIR /dotnetapp
-COPY out .
-ENTRYPOINT ["dotnet", "dotnetapp.dll"]
+FROM microsoft/dotnet:latest
+COPY . /app
+WORKDIR /app
+EXPOSE 5000/tcp
+ENTRYPOINT ["dotnet", "run"]
