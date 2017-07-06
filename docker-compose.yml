@@ -1,7 +1,4 @@
 web:
-  image: luismiguelbravo/dotnetcoreaspmvc
-    build:
-      context: .
-      dockerfile: Dockerfile
+  build: .
   ports:
     - '5000:5000'
